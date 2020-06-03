@@ -1,0 +1,65 @@
+#define ledverm 3
+#define ledazul 5
+#define ledverd 6
+void setup()
+{
+  pinMode(ledverm, OUTPUT);
+  pinMode(ledazul, OUTPUT);
+  pinMode(ledverd, OUTPUT);
+}
+
+void loop()
+{
+ for(int i=0; i<255; i=i+5){
+ analogWrite(ledverm, i);
+ analogWrite(ledazul, 0);
+ analogWrite(ledverd, 0);
+ delay(25);  
+  
+analogWrite(ledverm, i);
+ analogWrite(ledazul, 0);
+ analogWrite(ledverd, i);
+ delay(25);
+ 
+ analogWrite(ledverm, i);
+ analogWrite(ledazul, i);
+ analogWrite(ledazul, 0);
+ delay(25);
+   
+ analogWrite(ledverm, 0);
+ analogWrite(ledazul, i);
+ analogWrite(ledverd, i);
+ delay(25);
+ 
+ analogWrite(ledverm, 0);
+ analogWrite(ledazul, 0);
+ analogWrite(ledverd, i);
+ delay(25);
+ }
+  for(int i=255; i>0;i=i-5){
+  analogWrite(ledverm, i);
+ analogWrite(ledazul, 0);
+ analogWrite(ledverd, 0);
+ delay(25);  
+  
+ analogWrite(ledverm, i);
+ analogWrite(ledazul, 0);
+ analogWrite(ledverd, i);
+ delay(25);
+ 
+ analogWrite(ledverm, i);
+ analogWrite(ledazul, i);
+ analogWrite(ledazul, 0);
+ delay(25);
+   
+ analogWrite(ledverm, 0);
+ analogWrite(ledazul, i);
+ analogWrite(ledverd, i);
+ delay(25);
+ 
+ analogWrite(ledverm, 0);
+ analogWrite(ledazul, 0);
+ analogWrite(ledverd, i);
+ delay(25);
+  }
+  }
